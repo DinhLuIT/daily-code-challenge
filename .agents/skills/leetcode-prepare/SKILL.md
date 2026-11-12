@@ -7,7 +7,7 @@ description: >-
 
 # LeetCode Workspace Preparation Skill
 
-This skill automates the creation and setup of problem directories and boilerplate files, eliminating manual scaffolding so the candidate can focus immediately on problem-solving.
+This skill handles the verification, gathering of problem details, and automated setup of problem directories and boilerplate files. It strictly prohibits creating empty or placeholder files.
 
 ---
 
@@ -21,40 +21,47 @@ This skill automates the creation and setup of problem directories and boilerpla
    - Zero-padded for numbers under 100: `problem-01`, `problem-02`, ..., `problem-99`, `problem-100`.
    - Direct format for 101+: `problem-101`, `problem-102`, etc.
 3. **Required Files per Problem:**
-   - `README.md`: Contains problem statement, LeetCode link, constraints, and representative examples.
-   - `Solution.java`: Clean Java 17 solution class with appropriate package and method signature. **NO `main` method** (the candidate runs directly on LeetCode).
-   - `explain.md`: Empty template with 5 structured Vietnamese sections ready to be populated after the interview defense.
+   - `README.md`: Must contain the complete, real problem statement, LeetCode link, constraints, and representative examples.
+   - `Solution.java`: Clean Java 17 solution class with the exact LeetCode method signature. **NO `main` method** (the candidate runs directly on LeetCode).
+   - `explain.md`: Structured template in Vietnamese with the 5 standard sections, ready to be populated after the interview defense.
 4. **Markdown Formatting Rule:**
    - NEVER use emojis or graphical icons in any markdown files across the workspace.
 
 ---
 
-## Execution Steps
+## Execution Protocol
 
-When the candidate requests to prepare a problem (e.g., *"Hôm nay làm bài tiếp theo nhé"* or *"Chuẩn bị bài 2 Add Two Numbers"*):
+### Step 1: Pre-Flight Check & User Confirmation (Mandatory)
 
-### Step 1: Identify Problem Details
-* Determine the problem number:
-  - If specified by the candidate (e.g. LeetCode #2), use that number.
-  - If not specified, inspect existing folders and select the next sequential number.
-* Identify title, slug, difficulty (Easy / Medium / Hard), and pattern (e.g., Two Pointers, Linked List, Sliding Window).
+> [!IMPORTANT]
+> **Never scaffold blind placeholders.** If the problem title, number, or URL is ambiguous, missing, or unspecified, stop and ask the candidate first.
 
-### Step 2: Scaffold Files
-Run the built-in scaffolding script:
-```bash
-python3 scripts/prepare.py --num <NUMBER> --title "<TITLE>" --slug "<SLUG>" --diff "<DIFFICULTY>" --pattern "<PATTERN>"
-```
-Or create the directory and the 3 standard files directly.
+1. **Check Input Completeness:**
+   - Did the candidate provide a specific LeetCode URL, problem name, or problem number?
+2. **Handle Incomplete / Vague Prompts (e.g. "Làm bài tiếp theo nhé", "Chuẩn bị bài mới"):**
+   - **Do NOT** create folders with generic placeholder text.
+   - Either ask the candidate:
+     *"Which LeetCode problem do you want to tackle? Please provide the title or URL."*
+   - Or, if the candidate wants a recommendation from the roadmap, propose 1-2 curated candidates matching their current pattern (e.g., Two Pointers -> *Valid Palindrome*, *Two Sum II*):
+     *"For the next problem in the Arrays & Hashing roadmap, I recommend LeetCode #217: Contains Duplicate or LeetCode #242: Valid Anagram. Which one would you like to prepare?"*
+   - Wait for the candidate's confirmation before creating files.
 
-### Step 3: Populate Problem README.md
-Ensure `README.md` contains accurate problem details:
-- Problem title and LeetCode link.
-- Difficulty and Topic/Pattern.
-- Input / Output examples.
-- Constraints and any follow-up question.
+### Step 2: Fetch Accurate Problem Specifications
+Once the problem is confirmed, obtain:
+* Exact LeetCode title, problem number, and canonical URL.
+* Difficulty rating (Easy, Medium, Hard).
+* Algorithmic pattern / topic category.
+* Complete problem statement, constraints, and sample test cases.
+* Official LeetCode Java class and method signature.
+
+### Step 3: Scaffold Problem Workspace
+Create the problem folder and all 3 files with complete information:
+1. **`README.md`**: Complete problem description with examples and constraints.
+2. **`Solution.java`**: Package declaration and boilerplate class with the correct method signature and parameter types.
+3. **`explain.md`**: Structured 5-section skeleton for post-interview documentation.
 
 ### Step 4: Update Master Progress Tracker
-Add a new row to the table in the root `README.md` with:
+Add or update the row in the root `README.md` progress table with:
 - Problem number
 - Problem title with markdown link
 - Topic / Pattern
@@ -62,8 +69,8 @@ Add a new row to the table in the root `README.md` with:
 - Links to `Solution.java` and `explain.md`
 - Status: `In Progress`
 
-### Step 5: Present the Workspace to the Candidate
-Provide clickable links to:
+### Step 5: Brief the Candidate
+Present clickable links to:
 - `Solution.java`
 - `README.md`
-Give a 1-sentence thought-provoking prompt about the core challenge of the problem to initiate the session.
+Deliver a concise 1-sentence prompt focusing on the key constraint or invariant to jumpstart the candidate's thinking.

@@ -45,7 +45,8 @@ When Đình solves a problem and submits code or LeetCode results for grading:
 
 ### 4. Preparation Mode ("New Problem Setup")
 * When Đình requests to set up or start a new challenge, activate `leetcode-prepare`.
-* Automatically scaffold the folder (`problem-XX`), `README.md`, `Solution.java` (without `main`), and `explain.md`. Update root `README.md` tracker.
+* **Mandatory Pre-flight Check:** If problem name, number, or URL is missing or ambiguous, ASK Đình to confirm or specify the problem first. Never scaffold empty placeholder files.
+* Once confirmed, scaffold the folder (`problem-XX`), `README.md` (with full problem statement, constraints, examples), `Solution.java` (accurate LeetCode method signature, without `main`), and `explain.md`. Update root `README.md` tracker.
 
 ---
 
