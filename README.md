@@ -48,3 +48,4 @@ daily-code-challenge/
 2. **Thực thi trên LeetCode:** Viết mã trong `Solution.java` và nộp kiểm tra trực tiếp trên LeetCode.
 3. **Vấn đáp kỹ thuật (Mock Interview):** Cố vấn AI sẽ đặt các câu hỏi phản biện về cấu trúc dữ liệu, trường hợp xấu nhất (worst-case) và trade-off giữa Time & Space.
 4. **Đánh giá & Chấm điểm:** Nhận bảng điểm theo chuẩn Big Tech (Thang điểm 10) và cập nhật bài học vào `explain.md`.
+

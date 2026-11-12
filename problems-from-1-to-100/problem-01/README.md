@@ -50,3 +50,4 @@ Output: [0, 1]
 
 ## 4. Thử Thách Mở Rộng (Follow-up)
 Bạn có thể tìm ra thuật toán có độ phức tạp thời gian nhỏ hơn $O(n^2)$ không?
+
