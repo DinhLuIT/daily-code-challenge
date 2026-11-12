@@ -1,7 +1,7 @@
 # LeetCode 01: Two Sum
 
 - **Liên kết bài toán:** [leetcode.com/problems/two-sum](https://leetcode.com/problems/two-sum/)
-- **Độ khó:** 🟢 Easy
+- **Độ khó:** Easy
 - **Chủ đề:** Arrays, Hash Table
 
 ---
@@ -50,4 +50,3 @@ Output: [0, 1]
 
 ## 4. Thử Thách Mở Rộng (Follow-up)
 Bạn có thể tìm ra thuật toán có độ phức tạp thời gian nhỏ hơn $O(n^2)$ không?
-

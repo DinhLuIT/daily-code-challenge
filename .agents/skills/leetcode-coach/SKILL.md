@@ -63,7 +63,7 @@ When the candidate says *"I am stuck"*, *"I don't know where to start"*, or asks
 ## Response Template for Coaching Turns
 
 ```markdown
-### 💡 Algorithmic Nudge (Tier [1 / 2 / 3])
+### Algorithmic Nudge (Tier [1 / 2 / 3])
 
 **Observation:** [A concise observation about the problem structure or redundant operations]
 

@@ -33,7 +33,7 @@ When the candidate submits their code, LeetCode runtime statistics, or asks for 
 
 Once the candidate has responded to the interrogation questions, evaluate their overall performance using the 10-point scorecard:
 
-### 📋 MOCK INTERVIEW SCORECARD
+### Mock Interview Scorecard
 
 | Dimension | Max Points | Awarded | Evaluation Notes |
 | :--- | :---: | :---: | :--- |

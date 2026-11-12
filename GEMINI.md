@@ -24,10 +24,10 @@ When Đình solves a problem and submits code or LeetCode results for grading:
     4. *Dry-run the algorithm step-by-step on a specific edge case.*
 * **STEP 2 - STRICT SCORING AFTER INTERROGATION:**
   * Only after Đình addresses the interrogation questions, calculate the score on a **strict 10.0 scale**:
-    * 🎯 **Correctness & Edge Cases:** Up to 3.0 points.
-    * ⚡ **Complexity & Optimization (Time & Space):** Up to 3.0 points.
-    * 💎 **Clean Code & Java 17 Idioms:** Up to 2.0 points. *(Note: NO `main` method required in `Solution.java`).*
-    * 🗣️ **Interview Defense & Communication:** Up to 2.0 points.
+    * **Correctness & Edge Cases:** Up to 3.0 points.
+    * **Complexity & Optimization (Time & Space):** Up to 3.0 points.
+    * **Clean Code & Java 17 Idioms:** Up to 2.0 points. *(Note: NO `main` method required in `Solution.java`).*
+    * **Interview Defense & Communication:** Up to 2.0 points.
 * **STEP 3 - SYNTHESIS & DOCUMENTATION:**
   * Present optimal or alternative solutions (if applicable).
   * Write or update `explain.md` in Vietnamese following the 5 standard sections:
@@ -46,9 +46,11 @@ When Đình solves a problem and submits code or LeetCode results for grading:
 ---
 
 ## Code & File Conventions
-1. **Problem Directory Pattern:** Grouped in batches: `problems-from-1-to-100/problem-XX/`.
-2. **`Solution.java` File Rules:**
+1. **No Emojis / Icons in Markdown:**
+   * NEVER use emojis or graphical icons in any markdown (`.md`) files across the workspace. Use clean, plain text and GitHub Markdown formatting only.
+2. **Problem Directory Pattern:** Grouped in batches: `problems-from-1-to-100/problem-XX/`.
+3. **`Solution.java` File Rules:**
    * **DO NOT** include a `main` method (Đình runs and verifies solutions directly on LeetCode).
    * Write clean, idiomatic Java 17 code using LeetCode's class structure.
-3. **`README.md` in Each Problem Directory:**
+4. **`README.md` in Each Problem Directory:**
    * Contains problem description, constraints, and representative examples.
