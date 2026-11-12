@@ -15,17 +15,18 @@ Chào mừng bạn đến với **Daily Code Challenge** — dự án cá nhân 
 
 ## Cấu Trúc Thư Mục
 
-Dự án được phân loại theo từng nhóm 100 bài toán để tiện theo dõi streak và tiến độ:
+Dự án được phân loại theo từng nhóm 100 bài toán để quản lý gọn gàng và khoa học:
 
 ```
 daily-code-challenge/
-├── README.md                           # Bảng điều khiển tiến độ và giới thiệu dự án
+├── README.md                           # Giới thiệu dự án và mục lục các chặng
 ├── GEMINI.md                           # Bộ quy tắc cố vấn phỏng vấn kỹ thuật
 ├── .agents/skills/
 │   ├── leetcode-interviewer            # Skill phỏng vấn vấn đáp và chấm điểm gắt gao
 │   ├── leetcode-coach                  # Skill hướng dẫn gợi ý theo cấp độ khi bí
-│   └── leetcode-prepare                # Skill tự động tạo thư mục và file bài mới
+│   └── leetcode-prepare                # Skill xác nhận và tạo bài tập tự động
 └── problems-from-1-to-100/
+    ├── README.md                       # Bảng theo dõi tiến độ chi tiết của nhóm 1 - 100
     ├── problem-01/
     │   ├── README.md                   # Đề bài toán, ràng buộc và ví dụ
     │   ├── Solution.java               # Code giải bằng Java 17 (chuẩn LeetCode)
@@ -35,13 +36,15 @@ daily-code-challenge/
 
 ---
 
-## Bảng Theo Dõi Tiến Độ (Progress Tracker)
+## Bảng Theo Dõi Tiến Độ Theo Chặng (Batch Trackers)
 
-> **Thống kê:** Tổng số bài: **0** | Easy: **0** | Medium: **0** | Hard: **0**
+Mỗi nhóm 100 bài toán được quản lý trong một bảng theo dõi độc lập để giữ cho trang chủ luôn gọn gàng và dễ tra cứu:
 
-| # | Bài toán | Chủ đề / Pattern | Độ khó | Code | Phân tích chi tiết | Trạng thái |
-| :-: | :--- | :--- | :-: | :-: | :-: | :-: |
-| 01 | [Two Sum](https://leetcode.com/problems/two-sum/) | Arrays & Hashing | Easy | [Solution.java](./problems-from-1-to-100/problem-01/Solution.java) | [explain.md](./problems-from-1-to-100/problem-01/explain.md) | In Progress |
+| Chặng / Nhóm | Khoảng bài | Tiến độ | Bảng theo dõi chi tiết |
+| :--- | :---: | :---: | :--- |
+| **Batch 1** | Problems 001 - 100 | 1 / 100 | [problems-from-1-to-100/README.md](./problems-from-1-to-100/README.md) |
+| **Batch 2** | Problems 101 - 200 | 0 / 100 | *(Sẽ cập nhật khi hoàn thành Batch 1)* |
+| **Batch 3** | Problems 201 - 300 | 0 / 100 | *(Sẽ cập nhật khi hoàn thành Batch 2)* |
 
 ---
 

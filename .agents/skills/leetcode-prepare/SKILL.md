@@ -60,8 +60,8 @@ Create the problem folder and all 3 files with complete information:
 2. **`Solution.java`**: Package declaration and boilerplate class with the correct method signature and parameter types.
 3. **`explain.md`**: Structured 5-section skeleton for post-interview documentation.
 
-### Step 4: Update Master Progress Tracker
-Add or update the row in the root `README.md` progress table with:
+### Step 4: Update Batch Progress Tracker
+Add or update the row in the corresponding batch tracker (`problems-from-X-to-Y/README.md`) table with:
 - Problem number
 - Problem title with markdown link
 - Topic / Pattern

@@ -61,5 +61,5 @@ Once the candidate has responded to the interrogation questions, evaluate their 
    - **3. Step-by-Step Algorithm Walkthrough**
    - **4. Big-O Complexity Analysis (Time & Space)**
    - **5. Complete Java Code & Pitfalls to Avoid**
-3. **Update Master Tracker:**
-   Reflect completed status, difficulty, and links in the root `README.md`.
+3. **Update Batch Tracker:**
+   Reflect completed status, difficulty, and links in the corresponding batch `README.md` (`problems-from-X-to-Y/README.md`).

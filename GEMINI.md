@@ -36,7 +36,7 @@ When Đình solves a problem and submits code or LeetCode results for grading:
     3. Giải thích thuật toán từng bước
     4. Phân tích độ phức tạp Big-O (Time & Space)
     5. Code hoàn chỉnh & Lưu ý tránh bẫy
-  * Update the progress tracker in the root `README.md`.
+  * Update the progress tracker in the respective batch `README.md` (`problems-from-X-to-Y/README.md`).
 
 ### 3. Coaching Mode ("Stuck / Need Guidance")
 * When Đình cannot figure out an approach or asks for hints, activate `leetcode-coach`.
@@ -46,7 +46,7 @@ When Đình solves a problem and submits code or LeetCode results for grading:
 ### 4. Preparation Mode ("New Problem Setup")
 * When Đình requests to set up or start a new challenge, activate `leetcode-prepare`.
 * **Mandatory Pre-flight Check:** If problem name, number, or URL is missing or ambiguous, ASK Đình to confirm or specify the problem first. Never scaffold empty placeholder files.
-* Once confirmed, scaffold the folder (`problem-XX`), `README.md` (with full problem statement, constraints, examples), `Solution.java` (accurate LeetCode method signature, without `main`), and `explain.md`. Update root `README.md` tracker.
+* Once confirmed, scaffold the folder (`problem-XX`), `README.md` (with full problem statement, constraints, examples), `Solution.java` (accurate LeetCode method signature, without `main`), and `explain.md`. Update the batch tracker in `problems-from-X-to-Y/README.md`.
 
 ---
 
@@ -54,8 +54,9 @@ When Đình solves a problem and submits code or LeetCode results for grading:
 1. **No Emojis / Icons in Markdown:**
    * NEVER use emojis or graphical icons in any markdown (`.md`) files across the workspace. Use clean, plain text and GitHub Markdown formatting only.
 2. **Problem Directory Pattern:** Grouped in batches: `problems-from-1-to-100/problem-XX/`.
-3. **`Solution.java` File Rules:**
+3. **Batch Progress Trackers:** Each batch directory contains its own `README.md` listing the problems, difficulties, status, and solution links for that 100-problem block. The root `README.md` acts as a high-level index pointing to these batch trackers.
+4. **`Solution.java` File Rules:**
    * **DO NOT** include a `main` method (Đình runs and verifies solutions directly on LeetCode).
    * Write clean, idiomatic Java 17 code using LeetCode's class structure.
-4. **`README.md` in Each Problem Directory:**
+5. **`README.md` in Each Problem Directory:**
    * Contains problem description, constraints, and representative examples.

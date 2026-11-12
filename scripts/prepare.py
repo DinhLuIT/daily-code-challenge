@@ -22,10 +22,13 @@ def scaffold_problem(workspace_root, problem_num, title, slug, difficulty, patte
     batch_dir = f"problems-from-{start}-to-{end}"
     prob_dir_name = f"problem-{problem_num:02d}" if problem_num < 100 else f"problem-{problem_num}"
     
-    full_prob_dir = os.path.join(workspace_root, batch_dir, prob_dir_name)
+    full_batch_dir = os.path.join(workspace_root, batch_dir)
+    os.makedirs(full_batch_dir, exist_ok=True)
+    
+    full_prob_dir = os.path.join(full_batch_dir, prob_dir_name)
     os.makedirs(full_prob_dir, exist_ok=True)
     
-    # 1. README.md
+    # 1. Problem README.md
     readme_path = os.path.join(full_prob_dir, "README.md")
     if not os.path.exists(readme_path):
         lc_url = f"https://leetcode.com/problems/{slug}/" if slug else "https://leetcode.com/problems/"
@@ -98,29 +101,47 @@ class Solution {{
         with open(explain_path, "w", encoding="utf-8") as f:
             f.write(explain_content)
 
-    # 4. Update root README.md tracker if needed
-    root_readme = os.path.join(workspace_root, "README.md")
-    if os.path.exists(root_readme):
-        with open(root_readme, "r", encoding="utf-8") as f:
-            root_content = f.read()
-        row_signature = f"| {problem_num:02d} |"
-        if row_signature not in root_content and "| :-: | :--- |" in root_content:
-            rel_sol = f"./{batch_dir}/{prob_dir_name}/Solution.java"
-            rel_exp = f"./{batch_dir}/{prob_dir_name}/explain.md"
-            lc_link = f"[{title}](https://leetcode.com/problems/{slug}/)" if slug else title
-            new_row = f"| {problem_num:02d} | {lc_link} | {pattern} | {difficulty} | [Solution.java]({rel_sol}) | [explain.md]({rel_exp}) | In Progress |\n"
-            # Insert after the last table header separator or after the last row
-            root_content = root_content.replace(
+    # 4. Update Batch Tracker (problems-from-X-to-Y/README.md)
+    batch_readme_path = os.path.join(full_batch_dir, "README.md")
+    if not os.path.exists(batch_readme_path):
+        batch_header = f"""# Problems {start} to {end} Tracker
+
+Danh sách theo dõi tiến độ chi tiết các bài toán thuật toán từ {start} đến {end}.
+
+---
+
+## Danh Sách Bài Toán
+
+| # | Bài toán | Chủ đề / Pattern | Độ khó | Code | Phân tích chi tiết | Trạng thái |
+| :-: | :--- | :--- | :-: | :-: | :-: | :-: |
+"""
+        with open(batch_readme_path, "w", encoding="utf-8") as f:
+            f.write(batch_header)
+
+    with open(batch_readme_path, "r", encoding="utf-8") as f:
+        batch_content = f.read()
+
+    row_sig = f"| {problem_num:02d} |"
+    if row_sig not in batch_content:
+        rel_sol = f"./{prob_dir_name}/Solution.java"
+        rel_exp = f"./{prob_dir_name}/explain.md"
+        lc_link = f"[{title}](https://leetcode.com/problems/{slug}/)" if slug else title
+        new_row = f"| {problem_num:02d} | {lc_link} | {pattern} | {difficulty} | [Solution.java]({rel_sol}) | [explain.md]({rel_exp}) | In Progress |\n"
+        
+        # Append row after the separator
+        if "| :-: | :--- |" in batch_content:
+            batch_content = batch_content.replace(
                 "| :-: | :--- | :--- | :-: | :-: | :-: | :-: |\n",
                 f"| :-: | :--- | :--- | :-: | :-: | :-: | :-: |\n{new_row}"
             )
-            with open(root_readme, "w", encoding="utf-8") as f:
-                f.write(root_content)
+            with open(batch_readme_path, "w", encoding="utf-8") as f:
+                f.write(batch_content)
 
     print(f"Created problem {problem_num} at: {full_prob_dir}")
     print(f"  - {readme_path}")
     print(f"  - {solution_path}")
     print(f"  - {explain_path}")
+    print(f"  - Updated batch tracker: {batch_readme_path}")
 
 def main():
     parser = argparse.ArgumentParser(description="Scaffold a new LeetCode challenge folder and files.")
@@ -141,4 +162,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
