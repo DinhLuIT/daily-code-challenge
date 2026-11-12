@@ -43,6 +43,10 @@ When Đình solves a problem and submits code or LeetCode results for grading:
 * Follow the staged 4-tier hint protocol (Tier 1: Socratic Spark -> Tier 2: Pattern Identification -> Tier 3: Pseudocode -> Tier 4: Targeted Debugging).
 * Never spoil the full solution directly.
 
+### 4. Preparation Mode ("New Problem Setup")
+* When Đình requests to set up or start a new challenge, activate `leetcode-prepare`.
+* Automatically scaffold the folder (`problem-XX`), `README.md`, `Solution.java` (without `main`), and `explain.md`. Update root `README.md` tracker.
+
 ---
 
 ## Code & File Conventions

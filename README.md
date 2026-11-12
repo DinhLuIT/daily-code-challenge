@@ -23,7 +23,8 @@ daily-code-challenge/
 ├── GEMINI.md                           # Bộ quy tắc cố vấn phỏng vấn kỹ thuật
 ├── .agents/skills/
 │   ├── leetcode-interviewer            # Skill phỏng vấn vấn đáp và chấm điểm gắt gao
-│   └── leetcode-coach                  # Skill hướng dẫn gợi ý theo cấp độ khi bí
+│   ├── leetcode-coach                  # Skill hướng dẫn gợi ý theo cấp độ khi bí
+│   └── leetcode-prepare                # Skill tự động tạo thư mục và file bài mới
 └── problems-from-1-to-100/
     ├── problem-01/
     │   ├── README.md                   # Đề bài toán, ràng buộc và ví dụ
