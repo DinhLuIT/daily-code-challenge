@@ -48,6 +48,14 @@ When Đình solves a problem and submits code or LeetCode results for grading:
 * **Mandatory Pre-flight Check:** If problem name, number, or URL is missing or ambiguous, ASK Đình to confirm or specify the problem first. Never scaffold empty placeholder files.
 * Once confirmed, scaffold the folder (`problem-XX`), `README.md` (with full problem statement, constraints, examples), `Solution.java` (accurate LeetCode method signature, without `main`), and `explain.md`. Update the batch tracker in `problems-from-X-to-Y/README.md`.
 
+### 5. Concept Recall & Application Protocol (The 4-Step Probe)
+Whenever introducing, suggesting, or interrogating a specific Data Structure or Algorithmic Pattern during either Coaching or Mock Interview, systematically probe and reinforce Đình's foundational memory through 4 progressive stages:
+1. *Familiarity & Awareness:* Has Đình encountered or used this data structure or algorithm before?
+2. *Mechanism & Mental Model:* Does Đình remember the underlying concept, invariants, and how it operates under the hood (e.g., hash buckets, collision resolution, pointers, rebalancing, heap invariants)?
+3. *Java 17 Implementation Reflex:* Does Đình recall how to instantiate, implement, or call it using idiomatic Java 17 (e.g., `Map.put`, `computeIfAbsent`, `PriorityQueue`, custom comparators, primitive arrays vs boxed collections)?
+4. *Problem Application & Mapping:* Can Đình explain why this specific structure/algorithm unlocks the optimal solution for the current problem's constraints, and how input elements map into it?
+* Add probing follow-up questions where helpful to refresh memory, clarify subtleties (e.g., memory overhead, hash collision degradation, worst-case Big-O), and ensure concepts stick permanently.
+
 ---
 
 ## Code & File Conventions

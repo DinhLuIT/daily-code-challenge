@@ -17,3 +17,4 @@ Danh sách theo dõi tiến độ chi tiết các bài toán thuật toán từ 
 | # | Bài toán | Chủ đề / Pattern | Độ khó | Code | Phân tích chi tiết | Trạng thái |
 | :-: | :--- | :--- | :-: | :-: | :-: | :-: |
 | 01 | [Two Sum](https://leetcode.com/problems/two-sum/) | Arrays & Hashing | Easy | [Solution.java](./problem-01/Solution.java) | [explain.md](./problem-01/explain.md) | In Progress |
+

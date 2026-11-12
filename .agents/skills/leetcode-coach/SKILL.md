@@ -32,11 +32,12 @@ When the candidate says *"I am stuck"*, *"I don't know where to start"*, or asks
   - Prompt: *"If you were solving this by hand on a whiteboard with 5 numbers, what is the first thing your eyes would look for?"*
 
 ### Tier 2: Data Structure & Pattern Identification (Level 2 Hint)
-* **Goal:** Direct the candidate toward the optimal algorithmic paradigm.
-* **Technique:**
-  - Name 1–2 candidate patterns (e.g., Two Pointers, Sliding Window, Monotonic Stack, Prefix Sum, Hash Table).
-  - Explain *why* that data structure fits the invariant: *"If we need to check existence in $O(1)$ time while scanning the array once, what data structure gives us instantaneous lookup?"*
-  - Frame the trade-off: *"Can we trade $O(n)$ extra memory to reduce our time from $O(n^2)$ down to $O(n)$?"*
+* **Goal:** Direct the candidate toward the optimal algorithmic paradigm using the **4-Step Concept Recall Probe**:
+  1. **Familiarity Probe:** Check if the candidate knows the pattern or data structure: *"Have you encountered or used [Data Structure / Pattern, e.g., Hash Table, Two Pointers, Monotonic Stack] before?"*
+  2. **Mechanics & Mental Model:** Probe understanding of internal mechanics: *"Do you recall how it operates under the hood (e.g., how constant-time lookup works via hash buckets, or how pointers converge)?"*
+  3. **Java 17 Syntax & Implementation:** Verify coding reflex: *"Do you remember how to declare and use its core methods in Java 17 (e.g., `Map.put`, `Map.containsKey`, `computeIfAbsent`)?"*
+  4. **Application Mapping:** Guide candidate to connect concept to problem: *"How can we map this problem's input and target complement directly into that data structure to eliminate the inner loop?"*
+* Frame the trade-off: *"Can we trade $O(n)$ auxiliary space to drop our time complexity from $O(n^2)$ down to $O(n)$?"*
 
 ### Tier 3: Algorithmic Blueprint & Pseudocode (Level 3 Hint)
 * **Goal:** Lay out the step-by-step logical sequence in plain English or structured pseudocode.

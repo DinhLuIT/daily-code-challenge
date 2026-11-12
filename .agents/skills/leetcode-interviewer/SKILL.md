@@ -20,8 +20,9 @@ When the candidate submits their code, LeetCode runtime statistics, or asks for 
 
 1. **Analyze Candidate's Submission:**
    - Scan for time complexity, space complexity, auxiliary allocations, and unhandled edge cases (e.g., negative numbers, empty arrays, duplicate entries, numeric overflows).
-2. **Issue 2–3 Sharp Follow-up Questions:**
-   - **Data Structure Trade-offs:** *"Why did you choose data structure X over Y? How do you factor in allocation overhead, cache locality, or hash collisions?"*
+2. **Issue 2–3 Sharp Follow-up Questions (incorporating the 4-Step Probe):**
+   - **Data Structure Mechanics & Trade-offs:** *"You chose [Data Structure / Algorithm]. Can you explain how it operates under the hood in Java (e.g., hash bucket collision resolution, treeification, amortized resizing)? Why is this structure optimal here over alternatives like sorting or two pointers?"*
+   - **Java 17 Idioms & Memory Footprint:** *"What are the trade-offs of your Java implementation (e.g., autoboxing overhead with `Integer` vs primitive arrays, initial collection capacity)? Did you consider memory allocation overhead under large inputs?"*
    - **Worst-Case Big-O Invariants:** *"What is the true worst-case time and space complexity? What specific input distribution or degenerate case triggers that worst-case performance?"*
    - **Edge Cases & Scalability:** *"How does your code behave when constraints are pushed to extremes (e.g., streaming data where inputs do not fit into RAM, all duplicate elements, integer boundary conditions)?"*
    - **Execution Dry-run:** *"Walk me through the exact state changes of your variables for this specific tricky test case: [Provide concrete edge input]."*
