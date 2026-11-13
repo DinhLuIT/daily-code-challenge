@@ -17,9 +17,12 @@ This skill handles the verification, gathering of problem details, and automated
    - Problems 1 to 100: `problems-from-1-to-100/`
    - Problems 101 to 200: `problems-from-101-to-200/`
    - Problems 201 to 300: `problems-from-201-to-300/`
-2. **Problem Directory Naming:**
+2. **Problem Directory Naming & Sequential Challenge Indexing:**
+   - Problem numbers (`problem-01`, `problem-02`, ...) represent the **sequential challenge index of Đình's daily journey** (e.g., Challenge #01, Challenge #02, ...), **NOT** the LeetCode question ID!
+   - Always determine the next challenge index by finding the current highest `problem-XX` across the workspace and adding 1 (e.g., after `problem-01`, the next challenge is `problem-02`, regardless of whether the LeetCode problem ID is #242, #704, etc.).
    - Zero-padded for numbers under 100: `problem-01`, `problem-02`, ..., `problem-99`, `problem-100`.
    - Direct format for 101+: `problem-101`, `problem-102`, etc.
+   - The actual LeetCode problem ID (e.g., LeetCode 242) is documented inside the problem's `README.md`, `Solution.java`, `explain.md`, and the batch tracker table.
 3. **Required Files per Problem:**
    - `README.md`: Must contain the complete, real problem statement, LeetCode link, constraints, and representative examples.
    - `Solution.java`: Clean Java 17 solution class with the exact LeetCode method signature. **NO `main` method** (the candidate runs directly on LeetCode).

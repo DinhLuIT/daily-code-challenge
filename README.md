@@ -42,7 +42,7 @@ Mỗi nhóm 100 bài toán được quản lý trong một bảng theo dõi đ�
 
 | Chặng / Nhóm | Khoảng bài | Tiến độ | Bảng theo dõi chi tiết |
 | :--- | :---: | :---: | :--- |
-| **Batch 1** | Problems 001 - 100 | 1 / 100 | [problems-from-1-to-100/README.md](./problems-from-1-to-100/README.md) |
+| **Batch 1** | Problems 001 - 100 | 2 / 100 | [problems-from-1-to-100/README.md](./problems-from-1-to-100/README.md) |
 | **Batch 2** | Problems 101 - 200 | 0 / 100 | *(Sẽ cập nhật khi hoàn thành Batch 1)* |
 | **Batch 3** | Problems 201 - 300 | 0 / 100 | *(Sẽ cập nhật khi hoàn thành Batch 2)* |
 

@@ -61,7 +61,7 @@ Whenever introducing, suggesting, or interrogating a specific Data Structure or 
 ## Code & File Conventions
 1. **No Emojis / Icons in Markdown:**
    * NEVER use emojis or graphical icons in any markdown (`.md`) files across the workspace. Use clean, plain text and GitHub Markdown formatting only.
-2. **Problem Directory Pattern:** Grouped in batches: `problems-from-1-to-100/problem-XX/`.
+2. **Problem Directory Pattern:** Grouped in batches: `problems-from-1-to-100/problem-XX/`, where `XX` is the sequential challenge index (01, 02, ...) representing Đình's daily progress, not the LeetCode question ID.
 3. **Batch Progress Trackers:** Each batch directory contains its own `README.md` listing the problems, difficulties, status, and solution links for that 100-problem block. The root `README.md` acts as a high-level index pointing to these batch trackers.
 4. **`Solution.java` File Rules:**
    * **DO NOT** include a `main` method (Đình runs and verifies solutions directly on LeetCode).
